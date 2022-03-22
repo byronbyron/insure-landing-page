@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-sans-serif;
+    @apply text-base;
+    @apply bg-white;
+}
+
+h1, h2, h3 {
+    @apply font-serif;
+    @apply mt-0;
+}
+
+.header-nav-dropdown {
+    background: url('../images/bg-pattern-mobile-nav.svg') no-repeat left bottom theme('colors.very-dark-violet');
+    background-size: 100% 218px;
+    @apply absolute;
+    @apply inset-0;
+    @apply top-20;
+    @apply hidden;
+    @apply lg:static;
+    @apply lg:bg-none;
+    @apply lg:bg-transparent;
+    @apply lg:block;
+}
+
+.header-nav-dropdown.show,
+[aria-expanded="true"] .cross {
+    @apply block;
+}
+
+.cross,
+[aria-expanded="true"] .burger {
+    @apply hidden;
+}
+
+.header-list {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply pt-8 px-6;
+    @apply lg:flex-row;
+    @apply lg:p-0;
+}
+
+.header-list li {
+    @apply w-full;
+    @apply text-center;
+    @apply lg:w-auto;
+    @apply mb-2;
+    @apply lg:mb-0;
+}
+
+.header-list a {
+    @apply text-xl;
+    @apply inline-block;
+    @apply w-full;
+    @apply p-3.5;
+    @apply text-very-light-gray;
+    @apply uppercase;
+    @apply tracking-widest;
+    @apply lg:text-sm;
+    @apply lg:font-bold;
+    @apply lg:text-dark-grayish-violet;
+    @apply lg:hover:text-very-dark-violet;
+    @apply lg:py-2.5;
+    @apply lg:transition;
+}
+
+.header-list li:last-child a {
+    @apply mt-2;
+    @apply py-3;
+    @apply border-2 border-white lg:border-very-dark-violet;
+    @apply lg:mt-0;
+    @apply lg:ml-5;
+    @apply lg:py-2;
+    @apply lg:w-[146px];
+    @apply lg:text-very-dark-violet;
+    @apply lg:hover:bg-very-dark-violet;
+    @apply lg:hover:text-very-light-gray;
+    @apply lg:transition;
+}
+
+.footer {
+    background: url('../images/bg-pattern-footer-mobile.svg') no-repeat left top theme('colors.very-light-gray');
+}
+
+.footer-title,
+.footer-links li {
+    @apply font-sans-serif;
+    @apply font-bold;
+    @apply uppercase;
+    @apply text-sm;
+    @apply tracking-wider;
+    @apply text-dark-grayish-violet;
+}
+
+.footer-title,
+.footer-links {
+    @apply mb-7;
+}
+
+.footer-title {
+    @apply lg:mb-6;
+}
+
+.footer-links {
+    @apply lg:mb-0;
+}
+
+.footer-links a {
+    @apply text-dark-violet;
+    @apply block;
+    @apply py-2 lg:py-1.5;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    @apply hover:underline;
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        background-image: url('../images/bg-pattern-footer-desktop.svg');
+    }
+}
