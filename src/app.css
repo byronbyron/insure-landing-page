@@ -90,7 +90,7 @@ main {
     @apply transition;
     @apply lg:mt-0;
     @apply lg:ml-5;
-    @apply lg:py-2;
+    @apply lg:py-1;
     @apply lg:w-[146px];
     @apply lg:text-very-dark-violet;
     @apply lg:hover:bg-very-dark-violet;
