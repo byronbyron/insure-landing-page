@@ -7,7 +7,7 @@
     "url": "git@github.com:byronbyron/insure-landing-page.git"
   },
   "scripts": {
-    "prod": "npx tailwindcss -o build.css --minify",
+    "prod": "npx tailwindcss -i ./src/app.css -o ./css/app.css --minify",
     "dev": "npx tailwindcss -i ./src/app.css -o ./css/app.css --watch"
   },
   "devDependencies": {
