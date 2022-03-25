@@ -187,8 +187,8 @@ main {
 
 .featured-group {
     @apply mb-[140px];
-    @apply lg:flex;
-    @apply lg:-mx-4;
+    @apply lg:grid;
+    @apply lg:grid-cols-3;
     @apply lg:mb-[100px];
 }
 
@@ -196,9 +196,6 @@ main {
     @apply max-w-prose;
     @apply mx-auto;
     @apply mb-14;
-    @apply lg:px-4;
-    @apply lg:flex-initial;
-    @apply lg:w-1/3;
 }
 
 .featured-title {
